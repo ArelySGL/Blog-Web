@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXPLICACION CRUD</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,8 +12,68 @@
     </header>
     <main>
         <section id="seccion1">
-            <h2>CREAR un proyecto DJANGO</h2>
+            <h2>Crear un proyecto DJANGO</h2>
             <p>lo primero que debemos de realizar es confirmar la version de python que tenemos instalada .</p>
-            <p> con el comando 'phyton --version' en nuestro caso tenemos instalada la version 3.12.16</p>
-            <img src="imagenes/versionpy.png" alt="Version de python">
+            <p> con el comando 'phyton --version' (en nuestro caso tenemos instalada la version 3.12.16)</p>
+            <img src="/Imagenes/versionpy.png" alt="Version de python">
+            <p> Posteriormente con el comando 'pip install Django' procederemos con la instalación de Django </p>
+            <img src="/Imagenes/instdjango.png" alt="Instalación de Django">
+            <p> Para comenzar con el proyecto en Django tenemos que esmpezar con este comando 'django-admin startproject (el nombre de tu proyecto) ' <br>esto nos creará una nueva carpeta llamada "Proyecto" </br> </p>
+            <img src="/Imagenes/startproj.png" alt="creacion proyecto">
+            <img src="/Imagenes/carpproyecto.png" alt=" creacion carpeta">
         </section>
+        <section id="seccion2">
+            <h2>Servidor para el sitio web </h2>
+            <p>En este caso vamos a crear un servidor para ver como se trabajo Django. <br> para hacer esto vamos a trabajar dentro de la carpeta Proyecto así que nos cambbbiaremos de carpeta con el comando "cd proyecto".<br> ahora con el comando "manage.py runserver" correremos el archivo que nos ayudará a crear el servidor</p>
+            <img src="/Imagenes/run server.png" alt="Creación del servidor">
+            <p>Si nos damos cuenta esto generara una dirección la cual es "http://127.0.0.1:8000/" <br> debemos acceder a esta url mediante nuestro buscador para asegurarnos que el proyecto Django se encuentra
+            trabajando de manera satisfactoria </p>
+            <img src="/Imagenes/Django.png" alt="confirmación Django">
+        </section>
+    <section id="seccion3">
+        <h2>Iniciar una app en Django</h2>
+        <p> Para empezar con la creación de nuestro CRUD comenzaremos con la realización de librerías
+            para fabricarlo ponemos en la consola 'python manage.py startapp libreria'
+        </p>
+        <img src="/Imagenes/libreria.png" alt="creacion de libreria">
+        <p> Para registrar dentro del proyecto tendremos que cambiar ciertas instrucciones dentro del archivo settings '
+        </p>
+        <img src="/Imagenes/libreriaset.png" alt="configuración de libreria">
+    </section>
+    <section id="seccion4">
+        <h2>Creacion de una vista en Django</h2>
+        <p> Ahora realizaremos un primer saludo, tenemos que dirigirnos a la parte de libreria, seleccionamos view y realizaremos una instruccion que salude al 
+            usuario, y creamos una definición que nos permita realizar un saludo cada que se ingresa a la pagina
+        </p>
+        <img src="/Imagenes/libreria.png" alt="creacion de libreria">
+        <p> Para registrar dentro del proyecto tendremos que cambiar ciertas instrucciones dentro del archivo settings '
+        </p>
+        <img src="/Imagenes/defsaludo.png" alt="Función saludo">
+        <p>Ahora dentro de la carpeta libreria creamos un archivo llamado 'urls.py'</p>
+        <img src="/Imagenes/urlslib.png" alt="Creación urls">
+        <p>y para acceder a ellas modificamos las urls de proyecto'</p>
+        <img src="/Imagenes/urlspro.png" alt="Creación urls">
+    </section>
+    <section>
+        <h2>Creacion de una vista en HTML</h2>
+        <p> Dentro de libreria creamos una carpeta llamada templatesen donde
+            de manera automatica Django buscara las vistas <br> a su vez ahi mismo crearemos una carpeta nueva
+            llamada 'paginas' donde se depositará toda la información del proyecto
+        </p>
+        <h2>Creacion de la base de la pagina</h2>
+        <p> Dentro de la carpeta templates creamos un nuevo archivo llamado "base" donde crearemos una plantilla la cual
+            sera utilizada en todas nuestras paginas
+        </p>
+        <img src="/Imagenes/base.png" alt=" creacion de la base del doc">
+</section>
+<section>
+    <h2>Creando la plantilla base</h2>
+    <p> Dentro de libreria creamos una carpeta llamada templatesen donde
+        de manera automatica Django buscara las vistas <br> a su vez ahi mismo crearemos una carpeta nueva
+        llamada 'paginas' donde se depositará toda la información del proyecto
+    </p>
+    <h2>Creacion del CRUD</h2>
+    <p> Dentro de la carpeta templates creamos una nueva carpeta llamada form donde crearemos los archivos "index", "crear", "editar", "form"
+    </p>
+    <img src="/Imagenes/base.png" alt=" creacion de la base del doc">
+</section>

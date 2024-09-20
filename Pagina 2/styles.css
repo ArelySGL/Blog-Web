@@ -1,0 +1,98 @@
+h1{
+    color: beige;
+    background-color: #004494;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    color: black;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    color: beige;
+    background-color: #0056b3;
+}
+
+#index {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    height: 30px;
+    display: flex;
+    background-color: seagreen;
+    justify-content: center; /* Centrar los enlaces */
+}
+
+#index li {
+    margin: 0 16px; /* Espaciado entre los enlaces */
+}
+
+#index a {
+    text-decoration: none;
+    color: beige;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s; /* Efecto suave en el hover */
+    border: #333;
+}
+
+#index a:hover {
+    background-color: #004494; /* Cambia el color al pasar el ratón */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Estilos del contenedor principal */
+#contenido {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Estilos para la imagen */
+.django-image {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto;
+}
+
+/* Estilos para la tabla de contenidos */
+.table-of-contents {
+    list-style-type: none; 
+    padding: 0;
+    margin: 20px 0;
+}
+
+.table-of-contents li {
+    margin: 10px 0; 
+}
+
+.table-of-contents a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #007BFF; /* Color del enlace */
+    font-size: 16px;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+iframe {
+    display: block;
+    max-width: 100%; 
+    height: 500px;
+    margin: 10px auto; 
+}
+
