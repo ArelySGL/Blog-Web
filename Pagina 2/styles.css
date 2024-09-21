@@ -96,3 +96,7 @@ iframe {
     margin: 10px auto; 
 }
 
+.active {
+    font-weight: bold;
+    color: red;
+}

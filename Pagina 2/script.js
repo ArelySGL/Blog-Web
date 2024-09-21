@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const sections = [
         { id: 'pagprincipal', text: 'Home', href: 'index.html' },
-        { id: 'crud', text: 'CRUD', href: '.html' },
-        { id: 'contacto', text: 'Contacto', href: '.html' },
-        { id: 'recurosos', text: 'Recursos', href: '.html' },
-        { id: 'equipo', text: 'Nuestro Equipo', href: '.html' }
+        { id: 'crud', text: 'CRUD', href: 'crud.html' },
+        { id: 'contacto', text: 'Contacto', href: '#' },
+        { id: 'recurosos', text: 'Recursos', href: '#' },
+        { id: 'equipo', text: 'Nuestro Equipo', href: '#' }
     ];
+    
 
     sections.forEach(section => {
         const li = document.createElement('li');
@@ -19,5 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
         indexList.appendChild(li);
     });
 });
+const currentUrl = window.location.pathname;
+const navLinks = indexList.querySelectorAll('a');
 
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentUrl) {
+        link.classList.add('active');
+    }
+});
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const sectionId = link.getAttribute('href').replace('.html', '');
+        const section = document.getElementById(sectionId);
+        
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
         
