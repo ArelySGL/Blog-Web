@@ -1,4 +1,4 @@
-# myapp/views.py
+
 from django.shortcuts import render, redirect
 from .models import Libro
 from .forms import LibroForm
