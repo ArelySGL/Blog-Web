@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="StylesContact.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Formulario de Contacto</h1>
+        <form action="/enviar" method="post" id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="tipoMensaje">Tipo de mensaje:</label>
+            <select id="tipoMensaje" name="tipoMensaje" required>
+                <option value="queja">Queja</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="felicitacion">Felicitación</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono móvil:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                <option value="prefieroNoDecirlo">Prefiero no decirlo</option>
+            </select>
+
+            <label for="mensaje">Cuerpo del mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <div class="privacy-policy">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                <label for="privacyPolicy">
+                    Acepto la <a href="#" id="openModal">política de privacidad</a>.
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Aviso de Confidencialidad</h2>
+            <p> Este sitio web, desarrollado utilizando el framework Django, respeta y protege la privacidad de sus usuarios. Los datos personales que se recojan a través de este formulario serán tratados con estricta confidencialidad y utilizados únicamente para los fines específicos para los que se han recabado, como responder a sus solicitudes, quejas, sugerencias o felicitaciones.
+                No compartiremos su información personal con terceros sin su consentimiento explícito, salvo en los casos en que la ley lo exija o por requerimiento de una autoridad competente. Todos los datos proporcionados serán almacenados de manera segura en nuestros sistemas y se tomarán medidas técnicas y organizativas para evitar su acceso no autorizado, alteración o pérdida.
+                Al enviar este formulario, usted reconoce haber leído y aceptado nuestra política de privacidad y consiente el uso de sus datos de acuerdo con los términos descritos.
+                Si tiene cualquier duda acerca del tratamiento de sus datos o desea ejercer sus derechos de acceso, rectificación, cancelación u oposición, puede contactarnos a través de blog_sobre@Django.com o consultar nuestra Política de Privacidad completa.
+            </p>
+        </div>
+    </div>
+
+    <script src="Contacto.js"></script>
+</body>
+</html>
